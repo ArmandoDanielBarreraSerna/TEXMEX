@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B6B58089-FBF4-4A2B-8390-592F26F93227}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TEXMEX</RootNamespace>
+    <AssemblyName>TEXMEX</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.19.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BILL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BILL.Designer.cs">
+      <DependentUpon>BILL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Burromexa.cs" />
+    <Compile Include="Models\Enums.cs" />
+    <Compile Include="Models\FoodContador.cs" />
+    <Compile Include="Models\FoodOrganizador.cs" />
+    <Compile Include="Models\Hamburmexa.cs" />
+    <Compile Include="Models\HotDog.cs" />
+    <Compile Include="Models\iFood.cs" />
+    <Compile Include="Models\iProductos.cs" />
+    <Compile Include="Models\Nacheesse.cs" />
+    <Compile Include="PBurger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PBurger.Designer.cs">
+      <DependentUpon>PBurger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PBurro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PBurro.Designer.cs">
+      <DependentUpon>PBurro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PDogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PDogo.Designer.cs">
+      <DependentUpon>PDogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PNachos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PNachos.Designer.cs">
+      <DependentUpon>PNachos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterForm.Designer.cs">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TEXMEXFOOD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TEXMEXFOOD.Designer.cs">
+      <DependentUpon>TEXMEXFOOD.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BILL.resx">
+      <DependentUpon>BILL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PBurger.resx">
+      <DependentUpon>PBurger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PBurro.resx">
+      <DependentUpon>PBurro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PDogo.resx">
+      <DependentUpon>PDogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PNachos.resx">
+      <DependentUpon>PNachos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RegisterForm.resx">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TEXMEXFOOD.resx">
+      <DependentUpon>TEXMEXFOOD.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Images\1_G-BqMY9izC4Zj4eD8uzKvw.png" />
+    <Content Include="Images\600px-Antu_system-switch-user.svg.png" />
+    <Content Include="Images\b41e296f108acf3c12cc83dc2978436e.png" />
+    <Content Include="Images\cebolla.png" />
+    <Content Include="Images\chile.jpg" />
+    <Content Include="Images\Download-Food-PNG.png" />
+    <Content Include="Images\home-market-foods-rollerbites-tex-mex-cheeseburger-1024x683.png" />
+    <Content Include="Images\jitomate.png" />
+    <Content Include="Images\padlock-157618_960_720.png" />
+    <Content Include="Images\tacos-clipart-tex-mex-food-12.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
